@@ -1,0 +1,80 @@
+/* ====================================================
+   Sección: Servicios (grid + flip 3D)
+   ==================================================== */
+
+.services{ padding: 2rem 0; }
+.services__header{ max-width: var(--container); margin:0 auto .75rem; padding: 0 1rem; }
+.services__title{
+  text-align:center; color:#184b50; font-weight:700; line-height:1.2;
+  font-size: clamp(1.4rem, .9rem + 2.2vw, 2rem);
+}
+.services__grid{
+  display:grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem; max-width: var(--container); padding:1rem; margin:0 auto;
+}
+@media (max-width: 1024px){ .services__grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px){ .services__grid{ grid-template-columns: 1fr; } }
+
+/* Tarjeta */
+.service-card{ perspective: 1000px; outline: none; }
+.service-card:focus-within{ box-shadow: 0 0 0 3px rgba(114,225,244,.6); border-radius: 16px; }
+
+.service-card__inner{
+  position: relative; width:100%; height: 360px;
+  transform-style: preserve-3d; transition: transform .8s; border-radius: 16px;
+}
+.service-card:hover .service-card__inner,
+.service-card:focus-within .service-card__inner{ transform: rotateY(180deg); }
+
+.service-card__face{
+  position:absolute; inset:0; border-radius:16px; backface-visibility: hidden;
+  overflow:hidden; box-shadow: 0 6px 22px rgba(0,0,0,.10);
+}
+
+/* Frontal */
+.service-card__face--front{
+  background:#fff; display:grid; grid-template-rows: 1fr auto;
+}
+.service-card__media{ position:relative; width:100%; height:100%; min-height:0; }
+.service-card__media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.service-card__overlay{
+  position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,0)); opacity:.35; pointer-events:none;
+}
+.service-card__title{
+  margin:0; display:grid; place-items:center; text-align:center;
+  padding:.75rem; font-size:1rem; text-transform:uppercase; letter-spacing:.4px;
+  background: var(--primary-color); color: var(--accent-color);
+  border-bottom-left-radius:16px; border-bottom-right-radius:16px;
+  border-top: 4px solid #0000;
+}
+
+/* Reverso */
+.service-card__face--back{
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color:#fff; transform: rotateY(180deg);
+  padding: 1rem; display:grid; grid-template-rows: 1fr auto; align-items:center; text-align:center; gap:.75rem;
+}
+.service-card__face--back p{ margin:0; font-size:1.05rem; line-height:1.45; }
+
+/* CTA en reverso */
+.service-card__btn{
+  justify-self:center;
+  background: linear-gradient(to right, rgba(114,225,244,.5), rgba(114,225,244,0));
+  padding:.6rem 1rem; border-radius: 12px; border: 2px solid rgba(250,248,248,.5);
+  color:#fff; font-size:.98rem; display:inline-block; animation: pulse 2s infinite; transition: transform .3s ease; text-decoration:none;
+}
+.service-card__btn i{ margin-left:.5rem; transition: transform .3s ease; }
+.service-card__btn:hover i{ transform: translateX(5px); }
+
+/* Motion-safe */
+@media (prefers-reduced-motion: reduce){
+  .service-card__inner{ transition: none; }
+  .service-card:hover .service-card__inner,
+  .service-card:focus-within .service-card__inner{ transform: none; }
+  .service-card__btn{ animation: none; transition: none; }
+}
+
+/* Altura en móviles pequeños */
+@media (max-width: 480px){
+  .service-card__inner{ height: 320px; }
+}

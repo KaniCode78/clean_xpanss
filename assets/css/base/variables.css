@@ -1,0 +1,42 @@
+/* ====================================================
+   Base: Variables (colores, tipografías, escalas)
+   ==================================================== */
+
+:root{
+  /* Tipografía */
+  --font-sans: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  /* Paleta principal */
+  --primary-color: #a58bdb;   /* lavanda */
+  --accent-color:  #72e1f4;   /* celeste */
+  --primary-ink:   #111216;   /* texto principal */
+  --muted-ink:     #2b4f54;   /* textos secundarios */
+  --bg:            #ffffff;
+  --surface:       #ffffff;
+  --surface-2:     #f5f7f8;
+
+  /* Footer */
+  --footer-bg: #111218;
+  --footer-text: #e9eef2;
+  --footer-accent: rgba(165, 139, 219, .55);
+
+  /* Miscelánea */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 6px 18px rgba(0,0,0,.06);
+  --shadow-md: 0 10px 24px rgba(0,0,0,.10);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,.18);
+
+  /* Espaciado */
+  --container: 1200px;
+
+  /* Z-index */
+  --z-header: 1000;
+  --z-menu: 1100;
+  --z-toggle: 1200;
+}
+
+/* Modo reducido de movimiento */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}

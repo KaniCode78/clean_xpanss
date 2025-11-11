@@ -1,0 +1,29 @@
+/* Tarjetas de servicios con flip/focus */
+.services{
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  background:#fff;
+}
+.services__grid{
+  display:grid; gap:1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+.service-card{
+  grid-column: span 4;
+  position:relative; border-radius: calc(var(--radius) + 8px);
+  overflow:hidden; background: var(--surface-color);
+  box-shadow: var(--shadow);
+}
+.service-card__media img{ width:100%; height:auto; display:block; }
+.service-card__body{ padding:1rem; }
+.service-card__title{ font-weight:800; margin:.2rem 0 .5rem; }
+.service-card__text{ opacity:.9; line-height:1.7; }
+.service-card__actions{ margin-top:.8rem; display:flex; gap:.6rem; }
+
+.service-card:focus-within{
+  outline: 3px solid color-mix(in srgb, var(--primary-color) 50%, white);
+  outline-offset: 2px;
+}
+.service-card a:focus-visible{ outline: none; } /* manejado por el contenedor */
+
+@media (max-width: 900px){ .service-card{ grid-column: span 6; } }
+@media (max-width: 600px){ .service-card{ grid-column: 1 / -1; } }

@@ -1,0 +1,57 @@
+/* ====================================================
+   Sección: Hero
+   ==================================================== */
+
+/* HERO: ocupa toda la pantalla */
+#hero{
+  height: 100dvh;          /* alto exacto del viewport (incluye barras móviles) */
+  min-height: 100svh;      /* fallback seguro */
+  width: 100%;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; color:#fff; position:relative; padding: 0 2rem;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+    url("/assets/images/logo/pexels-jibarofoto-2833037.jpg") center/cover no-repeat; /* ajusta ruta si usas otra */
+  margin: 0;
+}
+
+#hero-content{
+  position:relative; z-index:2;
+  background: rgba(0,0,0,.40);
+  color:#fff;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 900px;
+  text-align: left;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+
+
+#hero h1 {
+  font-size: clamp(1.8rem, 1rem + 3vw, 2.6rem);
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+}
+
+#hero a {
+  background: linear-gradient(to right, rgba(114, 225, 244, .5), rgba(114, 225, 244, 0));
+  padding: .55rem 1rem;
+  border-radius: 12px;
+  border: 2px solid rgba(250, 248, 248, .5);
+  color: #fff;
+  font-size: 1rem;
+  display: inline-block;
+  animation: pulse 2s infinite;
+  transition: transform .3s ease;
+}
+
+#hero a:hover {
+  transform: translateY(-1px);
+}

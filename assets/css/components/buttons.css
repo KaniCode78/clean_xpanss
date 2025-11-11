@@ -1,0 +1,29 @@
+/* Botones reutilizables */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.5rem; padding:.8rem 1.1rem;
+  font-weight:600; border-radius: var(--radius);
+  border: 1px solid transparent; cursor:pointer;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn--primary{
+  background: var(--primary-color); color:#001018;
+}
+.btn--primary:hover,
+.btn--primary:focus-visible{
+  background: color-mix(in srgb, var(--primary-color) 85%, white);
+  border-color: color-mix(in srgb, var(--primary-color) 45%, white);
+  text-decoration:none;
+}
+
+.btn--ghost{
+  background: transparent; color: var(--white);
+  border-color: color-mix(in srgb, var(--primary-color) 35%, #fff);
+}
+.btn--ghost:hover,
+.btn--ghost:focus-visible{
+  background: color-mix(in srgb, var(--primary-color) 15%, transparent);
+  text-decoration:none;
+}

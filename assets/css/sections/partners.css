@@ -1,0 +1,88 @@
+/* ====================================================
+   Sección: Partners / Marcas (Carrusel)
+   ==================================================== */
+
+.partners{ padding: 2.5rem 0 1.5rem; text-align: center; }
+.partners__container{ max-width: var(--container); margin:0 auto; padding:0 1rem; }
+
+.partners__title{
+  color:#184b50; font-weight:300; line-height:1.2;
+  font-size: clamp(1.4rem, 1rem + 2vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+.partners__title span{ display:block; }
+
+/* Carrusel infinito */
+.partners__marquee{ position:relative; overflow:hidden; padding:.5rem 0; }
+.partners__track{
+  display:flex; align-items:center; gap: clamp(2rem, 6vw, 5rem);
+  width:max-content;
+  animation: partners-marquee 28s linear infinite;
+  will-change: transform;
+}
+.partners__marquee:hover .partners__track{ animation-play-state: paused; }
+
+.partners__item{ flex:0 0 auto; }
+.partners__item img{
+  height: clamp(38px, 6vw, 68px);
+  width:auto; object-fit:contain; display:block; opacity:.95;
+}
+
+/* Animación */
+@keyframes partners-marquee{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* Respeta usuarios con menos movimiento */
+@media (prefers-reduced-motion: reduce){
+  .partners__track{ animation: none; transform: none; }
+}
+
+/* Ajustes móviles */
+@media (max-width: 600px){
+  .partners{ padding: 2rem 0 1rem; }
+  .partners__title{ margin-bottom: .75rem; }
+}
+
+/* Glassmorphism opcional (ya activado en tu HTML con .partners--glass) */
+.partners--glass .partners__marquee{
+  background: rgba(255,255,255,.28);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(14px) saturate(120%);
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  padding: .85rem 1rem;
+  /* fade lateral */
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0%, rgba(0,0,0,.6) 6%, #000 14%, #000 86%, rgba(0,0,0,.6) 94%, transparent 100%);
+          mask-image: linear-gradient(to right,
+    transparent 0%, rgba(0,0,0,.6) 6%, #000 14%, #000 86%, rgba(0,0,0,.6) 94%, transparent 100%);
+}
+
+.partners__title--glass{
+  display:inline-block;
+  background: rgba(255,255,255,.28);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 16px;
+  padding: .6rem 1.2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  color: #184b50;
+  margin-inline: auto;
+}
+
+@media (prefers-color-scheme: dark){
+  .partners--glass .partners__marquee{
+    background: rgba(18,18,18,.35);
+    border-color: rgba(255,255,255,.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  }
+  .partners__title--glass{
+    background: rgba(18,18,18,.35);
+    border-color: rgba(255,255,255,.25);
+    color:#f0f0f0;
+  }
+}
