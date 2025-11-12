@@ -1,473 +1,258 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <!-- ================= Básicos ================= -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Myriam Luna | Liderazgo Consciente y Cultura Organizacional Positiva</title>
+<html lang="es" dir="ltr">
 
-  <!-- ================= Performance (preconnect / preload) ================= -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xpanss · UX/UI y Desarrollo Web que impulsa resultados</title>
+  <meta name="description"
+    content="Xpanss diseña y desarrolla experiencias web con enfoque en ROI, cultura colaborativa y crecimiento medible.">
+  <meta name="theme-color" content="#0051CF" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Preload de imagen de hero para evitar LCP alto (ajusta la ruta si cambia) -->
-  <link rel="preload" as="image" href="./assets/images/og-cover.jpg" imagesrcset="./assets/images/og-cover.jpg 1200w" imagesizes="100vw">
-
-  <!-- ================= Iconos ================= -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-papwRdsToxSgEo3rAg+cY6Fqk2Q4EyfI2aG+j6dLcdogxdsl+AN/4ApnyYe6SJDvc07vWduQk8hGytcfK2z5xg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- ================= SEO básico ================= -->
-  <link rel="canonical" href="https://dilejess.netlify.app/">
-  <meta name="description" content="Desierta la consciencia de tu liderazgo. Acompaño a personas y equipos a construir culturas organizacionales colaborativas, felices y con propósito.">
-
-  <!-- ================= Open Graph ================= -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Myriam Luna | Liderazgo Consciente y Cultura Organizacional Positiva">
-  <meta property="og:description" content="Desierta la consciencia de tu liderazgo. Acompaño a personas y equipos a construir culturas organizacionales colaborativas, felices y con propósito.">
-  <meta property="og:url" content="https://dilejess.netlify.app/">
-  <meta property="og:image" content="https://dilejess.netlify.app/assets/images/og-cover.jpg">
-  <meta property="og:locale" content="es_MX">
-
-  <!-- ================= Twitter Cards ================= -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Myriam Luna | Liderazgo Consciente y Cultura Organizacional Positiva">
-  <meta name="twitter:description" content="Desierta la consciencia de tu liderazgo. Acompaño a personas y equipos a construir culturas organizacionales colaborativas, felices y con propósito.">
-  <meta name="twitter:image" content="https://dilejess.netlify.app/assets/images/og-cover.jpg">
-
-  <!-- ================= Iconos & Manifest ================= -->
-  <link rel="icon" href="./assets/images/ICOno.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./assets/images/corazon-180.png" sizes="180x180">
-  <link rel="manifest" href="/site.webmanifest">
-
-
-<!-- Google Fonts: Montserrat -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-
-  <!-- ================= CSS (nuevo orden) ================= -->
-  <link rel="stylesheet" href="./assets/css/base/variables.css">
-  <link rel="stylesheet" href="./assets/css/base/globals.css">
-  <link rel="stylesheet" href="./assets/css/layout/header.css">
-  <link rel="stylesheet" href="./assets/css/sections/hero.css">
-  <link rel="stylesheet" href="./assets/css/sections/partners.css">
-  <link rel="stylesheet" href="./assets/css/sections/benefits.css">
-  <link rel="stylesheet" href="./assets/css/sections/about.css">
-  <link rel="stylesheet" href="./assets/css/sections/services.css">
-  <link rel="stylesheet" href="./assets/css/sections/closing-cta.css">
-  <link rel="stylesheet" href="./assets/css/components/social_fixed.css">
-  <link rel="stylesheet" href="./assets/css/layout/footer.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=League+Spartan:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  <!-- ===== Header ===== -->
+  <header class="site-header glass">
+    <a class="brand" href="#inicio" aria-label="Xpanss Home">
+      <!-- Usa cualquiera de tus dos logos -->
+      <img src="assets/images/logo/ICOno.svg" alt="Xpanss" class="brand__logo" />
 
-  <!-- ================= Redes Sociales Fijas ================= -->
-  <div class="page" aria-hidden="false">
-    <div class="box__wasa">
-      <a href="https://wa.me/525522534723" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-        <img class="logo__fix" src="./assets/images/fix_redes/whatsapp-square-svgrepo-com.svg" alt="WhatsApp">
-      </a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn">
-        <img class="logo__fix" src="./assets/images/fix_redes/linkedin-svgrepo-com.svg" alt="LinkedIn">
-      </a>
-    </div>
-  </div>
+    </a>
 
-  <!-- ================= Header ================= -->
-  <header class="contenedor_header" id="Home">
-    <div class="navbar" role="navigation" aria-label="Principal">
-      <div class="logo">
-        <img src="./assets/images/logo/Logo Black.svg" alt="Logo de Myriam Luna" class="logo_img" />
-      </div>
-
-      <ul class="links" role="menubar" aria-label="Secciones del sitio">
-        <li role="none"><a role="menuitem" href="#Home" aria-label="Ir a inicio">Inicio</a></li>
-        <li role="none"><a role="menuitem" href="#About" aria-label="Ir a acerca de">Acerca de</a></li>
-        <li role="none"><a role="menuitem" href="#Services" aria-label="Ir a servicios">Servicios</a></li>
-        <li role="none">
-          <a role="menuitem" href="https://wa.me/525522534723" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">Asesoría</a>
-        </li>
-      </ul>
-
-      <a href="./assets/plantilla/Dile Jess.pdf" target="_blank" rel="noopener noreferrer" class="actionp_btn" aria-label="Descargar E-Book">Descargar E-Book</a>
-
-      <button class="toggle_btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </button>
-    </div>
-
-    <nav class="dropdown_menu" id="mobile-menu" aria-hidden="true">
-      <ul>
-        <li><a href="#Home">Inicio</a></li>
-        <li><a href="#About">Acerca de</a></li>
-        <li><a href="#Services">Servicios</a></li>
-        <li>
-          <a href="https://wa.me/525522534723" target="_blank" rel="noopener noreferrer">Asesoría</a>
-        </li>
-        <li>
-          <a href="./assets/plantilla/Dile Jess.pdf" class="actionp_btn">Descargar E-Book</a>
-        </li>
+    <nav class="nav" aria-label="Principal">
+      <ul class="nav__list">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#casos">Casos</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a class="btn btn--small" href="#contacto">Hablemos</a></li>
       </ul>
     </nav>
 
-    <!-- Hero -->
-    <div id="hero" role="banner">
-      <div id="hero-content">
-        <h1>“El liderazgo más poderoso nace de la consciencia y la colaboración.”</h1>
-        <a href="https://wa.me/525522534723" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">¡Hablemos!</a>
-      </div>
-    </div>
+    <button class="hamburger" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+    </button>
+
+    <nav id="mobile-menu" class="mobile-drawer" aria-label="Menú móvil">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#casos">Casos</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a class="btn btn--full" href="#contacto">Hablemos</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main">
-    <!-- ================= Partners ================= -->
-    <section class="partners partners--glass" aria-labelledby="partners-title">
-      <div class="partners__container">
-        <h2 id="partners-title" class="partners__title partners__title--glass">
-          Cuento con el respaldo de los grandes, <span>para construir el futuro que sueñas.</span>
-        </h2>
+  <main id="inicio">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__content container">
+        <div class="hero__copy slide-in">
+          <h1>Xpanss: <span class="accent">El Liderazgo</span> <span class="accent">más poderoso</span> nace de la
+            conciencia y la colaboración."</h1>
 
-        <div class="partners__marquee" role="region" aria-label="Marcas que me respaldan">
-          <ul class="partners__track">
-            <!-- Lote 1 -->
-            <li class="partners__item"><img src="./assets/images/carrousel/AXA_Logo.svg" alt="AXA" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/img1.svg" alt="Seguros Monterrey" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/Logo_del_GNP.svg" alt="GNP Seguros" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/logo_sura.png" alt="SURA" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/Mapfre_logo.svg" alt="MAPFRE" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/bx+.png" alt="BX+" loading="lazy" decoding="async"></li>
 
-            <!-- Lote duplicado para efecto infinito -->
-            <li class="partners__item"><img src="./assets/images/carrousel/AXA_Logo.svg" alt="AXA" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/img1.svg" alt="Seguros Monterrey" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/Logo_del_GNP.svg" alt="GNP Seguros" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/logo_sura.png" alt="SURA" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/Mapfre_logo.svg" alt="MAPFRE" loading="lazy" decoding="async"></li>
-            <li class="partners__item"><img src="./assets/images/carrousel/bx+.png" alt="BX+" loading="lazy" decoding="async"></li>
+          <form class="hero__form glass" id="cta-form" aria-label="Agenda una consulta">
+
+            <button class="btn" type="submit">Agendar consulta</button>
+          </form>
+
+          <!-- Certificaciones -->
+          <ul class="certs">
+            <!-- Usa tus rutas reales -->
+            <li><img src="assets/images/cert/dising.webp" alt="Red Conocer"></li>
+            <li><img src="assets/images/cert/OC-300x188.png" alt="Design Thinking Practitioner"></li>
+            <li><img src="assets/images/cert/pngwing.com.png" alt="USGBC"></li>
           </ul>
         </div>
+
+
+      </div>
+
+      <div class="kpis container" aria-label="Indicadores">
+        <article class="kpi glass slide-in"><strong>16+</strong><span>Años de experiencia</span></article>
+        <article class="kpi glass slide-in delay-1"><strong>50+</strong><span>Proyectos lanzados</span></article>
+        <article class="kpi glass slide-in delay-2"><strong>350%</strong><span>Mejora en conversión</span></article>
+        <article class="kpi glass slide-in delay-3"><strong>30d</strong><span>Resultados visibles</span></article>
       </div>
     </section>
 
-    <!-- ================= Beneficios ================= -->
-    <section class="benefits" aria-labelledby="benefits-title">
-      <div class="benefits__container">
-        <h2 id="benefits-title" class="benefits__title">
-          Beneficios de tenerme como tu agente de seguros certificado
-        </h2>
+    <!-- ===== Servicios ===== -->
+    <section id="servicios" class="section container">
+      <header class="section__head">
+        <h2>Servicios</h2>
+        <p>De la estrategia a la ejecución, con cultura colaborativa.</p>
+      </header>
 
-        <ul class="benefits__list" role="list">
-          <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">🔍</span>
-            <div class="benefits__content">
-              <strong class="benefits__label">Asesoría a tu medida:</strong>
-              <span class="benefits__text">Me tomo el tiempo de conocer tu estilo de vida y tus metas para recomendarte solo lo que realmente necesitas.</span>
-            </div>
-          </li>
+      <div class="cards grid-3">
+        <article class="card slide-in">
+          <h3>Brand & Content</h3>
+          <p>Mensajes claros, storyframes y guías de estilo enfocadas en conversión.</p>
+          <a href="#" class="link">Ver más</a>
+        </article>
 
-          <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">💡</span>
-            <div class="benefits__content">
-              <strong class="benefits__label">Experiencia que te respalda:</strong>
-              <span class="benefits__text">Estoy al día con cambios y tendencias del sector para que tomes decisiones informadas y seguras.</span>
-            </div>
-          </li>
+        <article class="card slide-in delay-1">
+          <h3>UX/UI & Desarrollo</h3>
+          <p>Investigación, diseño visual y frontend moderno sin frameworks pesados.</p>
+          <a href="#" class="link">Ver más</a>
+        </article>
 
-          <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">🛡️</span>
-            <div class="benefits__content">
-              <strong class="benefits__label">Cobertura que protege lo que amas:</strong>
-              <span class="benefits__text">Juntos elegimos las pólizas que cuiden tu patrimonio, tu salud y la tranquilidad de tu familia.</span>
-            </div>
-          </li>
+        <article class="card slide-in delay-2">
+          <h3>Optimización & Data</h3>
+          <p>Analítica, funnels, tests A/B y mejora continua basada en métricas.</p>
+          <a href="#" class="link">Ver más</a>
+        </article>
+      </div>
 
-          <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">📊</span>
-            <div class="benefits__content">
-              <strong class="benefits__label">Mejor valor por tu inversión:</strong>
-              <span class="benefits__text">Busco las opciones que equilibren amplia protección y el mejor costo para que tu dinero rinda más.</span>
-            </div>
-          </li>
-
-          <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">🤝</span>
-            <div class="benefits__content">
-              <strong class="benefits__label">Acompañamiento de principio a fin:</strong>
-              <span class="benefits__text">No solo te entrego una póliza; te acompaño en cada paso, desde la contratación hasta cualquier trámite de siniestro.</span>
-            </div>
-          </li>
-
-          <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">🔒</span>
-            <div class="benefits__content">
-              <strong class="benefits__label">Confianza total:</strong>
-              <span class="benefits__text">Mi certificación es tu garantía de que cada recomendación se basa en profesionalismo y ética.</span>
-            </div>
-          </li>
+      <!-- Mini-banda: Las 5 habilidades (copy tomado de tu propuesta) -->
+      <div class="skills-band glass slide-in">
+        <strong>Las 5 habilidades para una colaboración exitosa:</strong>
+        <ul>
+          <li>Intención colaborativa</li>
+          <li>Apertura</li>
+          <li>Accountability</li>
+          <li>Autoconsciencia y consciencia de las otras personas</li>
+          <li>Negociación basada en intereses</li>
         </ul>
       </div>
     </section>
 
-    <!-- ================= Sobre mí ================= -->
-    <section class="about" id="About" aria-labelledby="about-title">
-      <div class="about__container">
-        <!-- Columna de texto -->
-        <div class="about__content">
-          <h2 id="about-title" class="about__title">Soy Myriam Luna</h2>
+    <!-- ===== Casos ===== -->
+    <section id="casos" class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <h2>Casos destacados</h2>
+          <p>Impacto medible, rápido.</p>
+        </header>
 
-          <p class="about__subtitle"><strong>Economista. Agente de Seguros certificada. Instructora de yoga. Mamá feliz.</strong></p>
+        <div class="cases grid-3">
+          <article class="case slide-in">
+            <img src="assets/case-1.jpg" alt="Caso 1">
+            <div class="case__content">
+              <h3>Fintech B2B</h3>
+              <p>+120% en leads tras rediseño UX y performance.</p>
+            </div>
+          </article>
 
-          <p class="about__lead">
-            Con más de 10 años de experiencia combinando el mundo financiero con el bienestar emocional, descubrí que proteger lo que más valoramos —nuestra salud, nuestro patrimonio y nuestra tranquilidad— es posible con un enfoque integral.
-          </p>
+          <article class="case slide-in delay-1">
+            <img src="assets/case-2.jpg" alt="Caso 2">
+            <div class="case__content">
+              <h3>EdTech</h3>
+              <p>$250K en ventas con embudos optimizados.</p>
+            </div>
+          </article>
 
-          <hr class="about__divider" aria-hidden="true" />
-
-          <h3 class="about__section-title">🌱 Una historia de equilibrio</h3>
-          <p>Durante mi trayectoria he logrado unir dos grandes pasiones:</p>
-
-          <div class="about__grid">
-            <p>🧘‍♀️ El yoga, que me ayuda a cultivar la calma y la atención plena en el presente, generando bienestar emocional y físico.</p>
-            <p>💼 Y el asesoramiento estratégico, que brinda seguridad, estructura y tranquilidad en nuestro presente y futuro, generando bienestar financiero.</p>
-          </div>
+          <article class="case slide-in delay-2">
+            <img src="assets/case-3.jpg" alt="Caso 3">
+            <div class="case__content">
+              <h3>Servicios Profesionales</h3>
+              <p>+25% en cierre al alinear propuesta de valor.</p>
+            </div>
+          </article>
         </div>
-
-        <!-- Columna imagen -->
-        <figure class="about__media about__media--glass">
-          <img src="./assets/images/jessia2fix.png" alt="Retrato de Myriam Luna"
-               class="about__image about__image--primary" width="840" height="1050" loading="lazy" decoding="async">
-          <img src="./assets/images/logojess.png" alt="Marca de Myriam Luna"
-               class="about__image about__image--badge" width="600" height="600" loading="lazy" decoding="async">
-        </figure>
       </div>
+    </section>
 
-      <!-- Bloque ancho inferior -->
-      <div class="about__wide">
-        <h3 class="about__wide-title">Esta combinación me permite ofrecerte un acompañamiento diferente:</h3>
-        <ul class="about__checklist" role="list">
-          <li>✔️ Con empatía y escucha activa.</li>
-          <li>✔️ Con herramientas financieras claras.</li>
-          <li>✔️ Y con una visión holística de tu bienestar.</li>
-        </ul>
+    <!-- ===== Clientes ===== -->
+    <section id="clientes" class="section container">
+      <header class="section__head">
+        <h2>Clientes</h2>
+        <p>Marcas que confían en Xpanss.</p>
+      </header>
 
-        <p class="about__closing">
-          Hoy, como agente de seguros, mi misión es ofrecerte soluciones personalizadas que te brinden la seguridad que necesitas para disfrutar de la vida al máximo.
+      <div class="clients grid-6 slide-in">
+        <!-- Reemplaza por tus logos reales -->
+        <img src="assets/client-1.svg" alt="Cliente 1" />
+        <img src="assets/client-2.svg" alt="Cliente 2" />
+        <img src="assets/client-3.svg" alt="Cliente 3" />
+        <img src="assets/client-4.svg" alt="Cliente 4" />
+        <img src="assets/client-5.svg" alt="Cliente 5" />
+        <img src="assets/client-6.svg" alt="Cliente 6" />
+      </div>
+    </section>
+
+    <!-- ===== Testimonios ===== -->
+    <section id="testimonios" class="section container">
+      <header class="section__head">
+        <h2>Lo que dicen</h2>
+      </header>
+
+      <blockquote class="quote glass slide-in">
+        <p>“Xpanss entendió el objetivo desde el día uno. Entregaron rápido, con claridad y obsesión por el detalle.”
         </p>
-      </div>
+        <footer>
+          <img src="assets/avatar-1.jpg" alt="" />
+          <div>
+            <strong>Sarah Mitchell</strong>
+            <span>CMO · Business Wise</span>
+          </div>
+        </footer>
+      </blockquote>
     </section>
 
-    <!-- ================= Servicios ================= -->
-    <section id="Services" class="services" aria-labelledby="services-title">
-      <div class="services__header">
-        <h2 id="services-title" class="services__title">Lo que ofrezco para asegurar tu futuro</h2>
-      </div>
-
-      <div class="services__grid">
-        <!-- Card 1 -->
-        <article class="service-card">
-          <div class="service-card__inner">
-            <figure class="service-card__face service-card__face--front">
-              <div class="service-card__media">
-                <img src="./assets/images/cards/seguro de ahorro.jpg" alt="Modalidad 40" loading="lazy" decoding="async">
-                <span class="service-card__overlay" aria-hidden="true"></span>
-              </div>
-              <figcaption class="service-card__title">Modalidad 40</figcaption>
-            </figure>
-
-            <div class="service-card__face service-card__face--back">
-              <p>Con mi asesoría personalizada en Modalidad 40, te ayudo a aumentar tu pensión del IMSS y a tomar decisiones inteligentes para tu futuro.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="service-card">
-          <div class="service-card__inner">
-            <figure class="service-card__face service-card__face--front">
-              <div class="service-card__media">
-                <img src="./assets/images/cards/seguro de auto.jpg" alt="Seguro de Auto" loading="lazy" decoding="async">
-              </div>
-              <figcaption class="service-card__title">Seguro de Auto</figcaption>
-            </figure>
-
-            <div class="service-card__face service-card__face--back">
-              <p>Protege tu vehículo contra cualquier imprevisto en el camino.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="service-card">
-          <div class="service-card__inner">
-            <figure class="service-card__face service-card__face--front">
-              <div class="service-card__media">
-                <img src="./assets/images/cards/fondo educativo.jpg" alt="Seguro Educativo" loading="lazy" decoding="async">
-              </div>
-              <figcaption class="service-card__title">Seguro Educativo</figcaption>
-            </figure>
-
-            <div class="service-card__face service-card__face--back">
-              <p>Invierte hoy en el futuro académico de tus hijos.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="service-card">
-          <div class="service-card__inner">
-            <figure class="service-card__face service-card__face--front">
-              <div class="service-card__media">
-                <img src="./assets/images/cards/seguro empresarial .jpg" alt="Seguro Empresarial" loading="lazy" decoding="async">
-              </div>
-              <figcaption class="service-card__title">Seguro Empresarial</figcaption>
-            </figure>
-
-            <div class="service-card__face service-card__face--back">
-              <p>Respalda tu negocio con coberturas hechas a tu medida.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 5 -->
-        <article class="service-card">
-          <div class="service-card__inner">
-            <figure class="service-card__face service-card__face--front">
-              <div class="service-card__media">
-                <img src="./assets/images/cards/gastos medicos.jpg" alt="Gastos Médicos Mayores" loading="lazy" decoding="async">
-              </div>
-              <figcaption class="service-card__title">Gastos Médicos Mayores</figcaption>
-            </figure>
-
-            <div class="service-card__face service-card__face--back">
-              <p>Cubre emergencias médicas con atención nacional e internacional.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 6 -->
-        <article class="service-card">
-          <div class="service-card__inner">
-            <figure class="service-card__face service-card__face--front">
-              <div class="service-card__media">
-                <img src="./assets/images/cards/plan de retiro.jpg" alt="Ahorro para el Retiro" loading="lazy" decoding="async">
-              </div>
-              <figcaption class="service-card__title">Ahorro para el Retiro</figcaption>
-            </figure>
-
-            <div class="service-card__face service-card__face--back">
-              <p>Construye una jubilación digna y tranquila desde hoy.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ================= CTA Cierre con ondas ================= -->
-    <section class="closing-cta" aria-labelledby="closing-cta-title">
-      <div class="closing-cta__wave closing-cta__wave--top" aria-hidden="true">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <path d="M0,80 C240,120 480,0 720,40 C960,80 1200,20 1440,60 L1440,0 L0,0 Z"></path>
-        </svg>
-      </div>
-
-      <div class="closing-cta__container">
-        <div class="closing-cta__copy">
-          <h2 id="closing-cta-title" class="closing-cta__title">Porque tu tranquilidad merece lo mejor</h2>
-          <p class="closing-cta__subtitle">¿List@ para tomar decisiones inteligentes y proteger lo que más amas?</p>
-          <a class="closing-cta__button"
-             href="https://wa.me/525522534723"
-             target="_blank" rel="noopener noreferrer" aria-label="Agendar asesoría por WhatsApp">
-            ¡Agenda tu asesoría!
-          </a>
+    <!-- ===== CTA ===== -->
+    <section id="contacto" class="cta">
+      <div class="container cta__grid">
+        <div class="slide-in">
+          <h2>¿Listo para acelerar con Xpanss?</h2>
+          <p>Agenda una consultoría express y recibe un plan claro de acción.</p>
         </div>
-
-        <figure class="closing-cta__media">
-          <img src="./assets/images/jessia2fix.png" alt="Myriam Luna, agente de seguros" loading="lazy" decoding="async">
-        </figure>
-      </div>
-
-      <div class="closing-cta__wave closing-cta__wave--bottom" aria-hidden="true">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <path d="M0,40 C240,80 480,20 720,60 C960,100 1200,0 1440,40 L1440,120 L0,120 Z"></path>
-        </svg>
+        <form class="cta__form glass slide-in delay-1" aria-label="Formulario de contacto">
+          <label class="sr-only" for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+          <label class="sr-only" for="email2">Correo</label>
+          <input id="email2" name="email2" type="email" placeholder="Tu correo" required>
+          <button class="btn btn--light" type="submit">Quiero hablar</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <!-- ================= Footer ================= -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__container">
-      <div class="site-footer__brand">
-        <img src="./assets/images/logojess.png" alt="Myriam Luna" class="site-footer__logo" loading="lazy">
-        <p class="site-footer__tagline">Soluciones de protección y bienestar con un enfoque humano.</p>
-        <ul class="site-footer__social" aria-label="Redes sociales">
-          <li><a href="https://www.instagram.com/jessicabrego/" target="_blank" rel="noopener" aria-label="Instagram">IG</a></li>
-          <li><a href="https://www.facebook.com/jessica.abrego.18" target="_blank" rel="noopener" aria-label="Facebook">FB</a></li>
-          <li><a href="https://www.linkedin.com/in/jessicabrego/" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a></li>
-          <li><a href="https://wa.me/525522534723" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a></li>
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="#inicio">
+          <img src="assets/ICOno.jpeg" alt="Xpanss" class="brand__logo" />
+          <span class="brand__text">Xpanss</span>
+        </a>
+        <p>Desarrollo web, UX/UI y estrategia con foco en crecimiento.</p>
+        <ul class="social">
+          <li><a href="#" aria-label="LinkedIn">in</a></li>
+          <li><a href="#" aria-label="X">X</a></li>
+          <li><a href="#" aria-label="Instagram">IG</a></li>
         </ul>
       </div>
-
-      <div class="site-footer__info">
-        <h3 class="site-footer__heading">Contáctame</h3>
-        <ul class="site-footer__list">
-          <li><span>Correo</span> <a href="mailto:contacto@dilejessatufuturo.com">contacto@dilejessatufuturo.com</a></li>
-          <li><span>Teléfono</span> <a href="tel:+529985551010">+52 998 555 1010</a></li>
-          <li><span>Horario</span> Lun–Vie 9am–6pm</li>
-        </ul>
-      </div>
-
-      <nav class="site-footer__links" aria-label="Enlaces rápidos">
-        <h3 class="site-footer__heading">Quick links</h3>
-        <ul class="site-footer__list">
-          <li><a href="#Home">Inicio</a></li>
-          <li><a href="#About">Acerca de</a></li>
-          <li><a href="#Services">Servicios</a></li>
-          <li><a href="./assets/plantilla/Dile Jess.pdf" target="_blank" rel="noopener">Descargar E-Book</a></li>
+      <nav aria-label="Footer">
+        <ul class="footer__links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
         </ul>
       </nav>
+      <address class="footer__contact">
+        <a href="mailto:hola@xpanss.com">hola@xpanss.com</a><br>
+        <a href="tel:+522229106125">+52 222 910 6125</a>
+      </address>
     </div>
-
-    <div class="site-footer__bottom">
-      <p>© <span id="year"></span> Myriam Luna · Todos los derechos reservados</p>
-      <p class="footer-credit">
-        © 2025 · Designed &amp; Developed with <span aria-hidden="true">💜</span>
-        by <a href="https://www.kanicode.website" target="_blank" rel="noopener noreferrer">KaniCode</a>
-      </p>
+    <div class="container footer__legal">
+      <small>© <span id="year"></span> Xpanss. Todos los derechos reservados.</small>
+      <a href="#">Términos</a>
+      <a href="#">Privacidad</a>
     </div>
   </footer>
 
-  <!-- ================= JS ================= -->
-  <script src="./assets/js/nav.js" defer></script>
-
-  <script>
-    // Año dinámico del footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- ================= SEO JSON-LD ================= -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "InsuranceAgency",
-    "name": "Myriam Luna",
-    "url": "https://dilejess.netlify.app/",
-    "logo": "https://dilejess.netlify.app/assets/images/logojess.png",
-    "image": "https://dilejess.netlify.app/assets/images/logojess.png",
-    "email": "contacto@dilejessatufuturo.com",
-    "telephone": "+529985551010",
-    "areaServed": "MX",
-    "founder": "Myriam Luna",
-    "sameAs": [
-      "https://www.instagram.com/jessicabrego/",
-      "https://www.facebook.com/jessica.abrego.18",
-      "https://www.tiktok.com/@jessicabrego",
-      "https://wa.me/525522534723"
-    ]
-  }
-  </script>
+  <script src="app.js" defer></script>
 </body>
+
 </html>
