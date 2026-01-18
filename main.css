@@ -213,6 +213,7 @@ a:hover {
   background-image: url("./assets/images/pexels-tima-miroshnichenko-5686014.jpg");
   background-size: cover;
   background-position: center;
+
 }
 
 /**/
@@ -340,27 +341,7 @@ a:hover {
   opacity: .85
 }
 
-.certificaciones {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Alinea verticalmente */
-  gap: 2rem;               /* Espacio entre imágenes */
-  flex-wrap: wrap;         /* Permite que bajen en pantallas pequeñas */
-  padding: 2rem;
-  width: 100%;
-}
 
-.certificaciones img {
-  width: 180px;           /* Tamaño uniforme */
-  height: 180px;          /* Mantén proporción cuadrada */
-  object-fit: contain;    /* Ajusta sin deformar */
-  filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); /* Suaviza */
-  transition: transform 0.3s ease;
-}
-
-.certificaciones img:hover {
-  transform: scale(1.05); /* Pequeño efecto al pasar el mouse */
-}
 
 
 
@@ -382,7 +363,7 @@ a:hover {
   color: #fff
 }
 
-.kpi:nth-child(1) {
+/* .kpi:nth-child(1) {
   background: var(--blue)
 }
 
@@ -396,7 +377,7 @@ a:hover {
 
 .kpi:nth-child(4) {
   background: var(--red)
-}
+} */
 
 .kpi strong {
   font-size: 1.6rem;
