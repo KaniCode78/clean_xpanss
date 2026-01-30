@@ -749,7 +749,7 @@ a:hover {
   display: grid;
   align-items: center;
   padding: 96px 0 48px;              /* espacio para header sticky */
-  background: url("assets/images/DSC_4527.JPG") center/cover no-repeat;
+  background: url("assets/images/hero_img.jpeg") center/cover no-repeat;
 }
 
 /* Overlay para legibilidad del texto */
