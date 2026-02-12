@@ -1,0 +1,194 @@
+/* ====== Servicios (layout) ====== */
+.services {
+  padding: 2rem 0;
+  font-family: var(--fuentePrincipal, "Montserrat", sans-serif);
+}
+
+.services__header {
+  max-width: 1200px;
+  margin: 0 auto 0.75rem;
+  padding: 0 1rem;
+}
+
+.services__title {
+  text-align: center;
+  color: #184b50;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(1.4rem, 0.9rem + 2.2vw, 2rem);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .services__grid { grid-template-columns: 1fr; }
+}
+
+/* ====== Tarjeta con flip 3D ====== */
+.service-card {
+  perspective: 1000px; /* crea el espacio 3D */
+  outline: none;       /* lo manejamos en focus */
+}
+
+/* Accesibilidad: foco visible para teclado */
+.service-card:focus-within {
+  box-shadow: 0 0 0 3px rgba(114,225,244,.6);
+  border-radius: 16px;
+}
+
+.service-card__inner {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  transform-style: preserve-3d;
+  transition: transform .8s;
+  border-radius: 16px;          /* mismo radio en caras */
+}
+
+/* Flip en hover y teclado (focus-within) */
+.service-card:hover .service-card__inner,
+.service-card:focus-within .service-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras */
+.service-card__face {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+}
+
+/* Cara frontal */
+.service-card__face--front {
+  background: #ffffff;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+/* Media / imagen */
+.service-card__media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.service-card__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,0));
+  opacity: .35;
+  pointer-events: none;
+}
+
+/* Título en la frenta */
+.service-card__title {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: .75rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  background: var(--primary-color, #a58bdb);
+  color: var(--secondary-color, #72e1f4);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top: 4px solid #0000; /* cero contraste duro abajo */
+  /* si quieres borde negro como el original, usa: border-top: none; y añade border afuera */
+}
+
+/* Cara trasera */
+.service-card__face--back {
+  background: linear-gradient(135deg, var(--primary-color, #a58bdb), var(--secondary-color, #72e1f4));
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  text-align: center;
+  gap: .75rem;
+}
+
+/* Texto en reverso */
+.service-card__face--back p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+
+/* CTA – igual al botón “¡Hablemos!” del héroe */
+.service-card__btn {
+  justify-self: center;
+  background: linear-gradient(to right, rgba(114,225,244,.5), rgba(114,225,244,0));
+  padding: .6rem 1rem;
+  border-radius: 12px;
+  border: rgba(250,248,248,.5) 2px solid;
+  color: #ffffff;
+  font-size: .98rem;
+  display: inline-block;
+  animation: pulse 2s infinite;            /* reutiliza tu @keyframes pulse */
+  transition: transform .3s ease;
+  text-decoration: none;
+}
+.service-card__btn i {
+  margin-left: .5rem;
+  transition: transform .3s ease;
+}
+.service-card__btn:hover i { transform: translateX(5px); }
+
+/* Preferencias de movimiento: desactiva animaciones pesadas */
+@media (prefers-reduced-motion: reduce) {
+  .service-card__inner { transition: none; }
+  .service-card:hover .service-card__inner,
+  .service-card:focus-within .service-card__inner { transform: none; }
+  .service-card__btn { animation: none; transition: none; }
+}
+
+/* ====== Alturas adaptativas (opcional) ====== */
+@media (max-width: 480px) {
+  .service-card__inner { height: 320px; }
+}
+
+/* ====== Variante opcional: Glassmorphism ======
+   Aplica .service-card--glass en <article class="service-card service-card--glass"> */
+.service-card--glass .service-card__face--front {
+  background: rgba(255,255,255,0.28);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(14px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.45);
+}
+.service-card--glass .service-card__face--back {
+  background: linear-gradient(135deg, rgba(165,139,219,.75), rgba(114,225,244,.75));
+}
+@media (prefers-color-scheme: dark) {
+  .service-card--glass .service-card__face--front {
+    background: rgba(18,18,18,0.35);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  }
+}
+
+/* Estado activado por JS */
+.service-card.is-flipped .service-card__inner {
+  transform: rotateY(180deg);
+}
