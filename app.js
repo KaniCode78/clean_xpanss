@@ -138,3 +138,7 @@ tabs.forEach((tab) => {
   const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduced) start();
 })();
+
+
+//carrusel metodos
+
