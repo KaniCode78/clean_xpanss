@@ -753,17 +753,17 @@ a:hover {
 }
 
 /* Overlay para legibilidad del texto */
-.hero__overlay{
+/*.hero__overlay{
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
+    -10deg,
     rgba(255,255,255,.82) 0%,
-    rgba(255,255,255,.62) 45%,
-    rgba(255,255,255,.18) 100%
+    rgba(255,255,255,.62) 25%,
+    rgba(255,255,255,.18) 80%
   );
   pointer-events: none;
-}
+}*/
 
 /* Layout interno: texto a la izquierda, KPIs a la derecha */
 /*.hero__layout{
@@ -780,33 +780,7 @@ a:hover {
 
 
 
-/* Certificaciones alineadas y pequeñas */
-.certs{
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  max-width: 560px;
-}
-.certs li{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  padding: 10px;
-  background: rgba(255,255,255,.65);
-  backdrop-filter: blur(8px) saturate(140%);
-  -webkit-backdrop-filter: blur(8px) saturate(140%);
-  border: 1px solid rgba(255,255,255,.35);
-  box-shadow: var(--glass-shadow);
-}
-.certs img{
-  height: 42px;             /* tamaño uniforme */
-  width: auto;
-  object-fit: contain;
-}
+
 
 /* KPIs dentro del hero (lado derecho) */
 .hero__kpis{
@@ -851,9 +825,7 @@ a:hover {
       rgba(255,255,255,.18) 100%
     );
   }
-  .hero__form{
-    flex-direction: column;
-  }
+ 
   .hero__kpis{
     grid-template-columns: 1fr;      /* KPIs en columna */
   }
@@ -915,7 +887,7 @@ a:hover {
 }
 
 .hero__kpis--center .kpi strong{
-  font-size: 1.8rem;
+  font-size: 1rem;
   display: block;
   margin-bottom: 4px;
 }
@@ -940,7 +912,7 @@ a:hover {
 }
 
 
-
+/*termina hero */
 
 
 /* ===== Sección Biografía (Myriam Luna) ===== */
