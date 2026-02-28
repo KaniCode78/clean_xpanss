@@ -865,9 +865,44 @@ a:hover {
   min-height: calc(100vh - 80px); /* compensa header */
 }
 
-.hero__copy{
-  max-width: 1020px;
-}
+ .hero__copy{
+   max-width: 1020px;
+   margin-inline: auto;
+ }
+
+ /* Banner glass para el texto del hero (como el ejemplo) */
+ .hero--fullscreen .hero__layout--center .hero__copy{
+   display: inline-block;
+   padding: 18px 22px;
+   border-radius: 18px;
+
+   /* gris translúcido */
+   background: rgba(210, 218, 224, .55);
+   border: 1px solid rgba(255,255,255,.28);
+
+   /* blur real */
+   backdrop-filter: blur(14px) saturate(120%);
+   -webkit-backdrop-filter: blur(14px) saturate(120%);
+
+   /* sombra suave */
+   box-shadow: 0 14px 40px rgba(0,0,0,.18);
+ }
+
+ /* Ajuste de color del texto dentro del banner */
+ .hero--fullscreen .hero__layout--center .hero__copy h1{
+   color: rgba(11,31,39,.92);
+ }
+
+ .hero--fullscreen .hero__layout--center .hero__copy p{
+   color: rgba(11,31,39,.78);
+ }
+
+ /* Fallback si backdrop-filter no está soportado */
+ @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+   .hero--fullscreen .hero__layout--center .hero__copy{
+     background: rgba(210, 218, 224, .78);
+   }
+ }
 
 /* KPIs centrados */
 .hero__kpis--center{
@@ -1158,25 +1193,29 @@ a:hover {
 
 /* Front: imagen de fondo + overlay */
 .method-bg{
-  background-size: cover;
+  /* Mantén la imagen completa dentro de la card (sin recorte) */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* Fondo blanco para que el “contain” se vea limpio */
+  background-color: #ffffff;
 }
 
 /* Cambia estas rutas por tus imágenes */
 .method-bg--ai{ background-image: url("assets/images/carru_met/appreciative.jpeg"); }
 .method-bg--dt{ background-image: url("assets/images/carru_met/Desgin\ thinking.jpeg"); }
 .method-bg--ce{ background-image: url("assets/images/carru_met/team\ coaching.jpeg"); }
-.method-bg--rc{ background-image: url("assets/images/carru_met/happiness.jpeg"); }
-.method-bg--ho{ background-image: url("assets/images/carru_met/radical.jpeg"); }
+.method-bg--rc{ background-image: url("assets/images/carru_met/radical.jpeg"); }
+.method-bg--ho{ background-image: url("assets/images/carru_met/happiness.jpeg"); }
 
 /* Sombra/overlay para legibilidad sobre la foto */
 .flip-card__shade{
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(6,22,27,.05) 0%, rgba(6,22,27,.70) 82%),
-    radial-gradient(120% 120% at 0% 0%, rgba(0,169,206,.18) 0%, transparent 60%);
+   background:
+  linear-gradient(180deg, rgba(6,22,27,0) 0%, rgba(6,22,27,.78) 86%),
+  radial-gradient(120% 120% at 0% 0%, rgba(0,169,206,.10) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1210,15 +1249,14 @@ a:hover {
   background: linear-gradient(135deg, var(--blue), var(--teal));
   border: 1px solid rgba(255,255,255,.22);
   box-shadow: 0 10px 18px rgba(0,81,207,.18);
-}
-
-
-.flip-card__tag{
   max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
+
+
+
 
 .flip-card__front h3{
   margin: 0;
