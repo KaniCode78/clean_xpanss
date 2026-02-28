@@ -1164,11 +1164,11 @@ a:hover {
 }
 
 /* Cambia estas rutas por tus imágenes */
-.method-bg--ai{ background-image: url("assets/images/cards/Card1.JPG"); }
-.method-bg--dt{ background-image: url("assets/images/cards/card2.JPG"); }
-.method-bg--ce{ background-image: url("assets/images/cards/card3.JPG"); }
-.method-bg--rc{ background-image: url("assets/images/cards/card4.JPG"); }
-.method-bg--ho{ background-image: url("assets/images/cards/card5.JPG"); }
+.method-bg--ai{ background-image: url("assets/images/carru_met/appreciative.jpeg"); }
+.method-bg--dt{ background-image: url("assets/images/carru_met/Desgin\ thinking.jpeg"); }
+.method-bg--ce{ background-image: url("assets/images/carru_met/team\ coaching.jpeg"); }
+.method-bg--rc{ background-image: url("assets/images/carru_met/happiness.jpeg"); }
+.method-bg--ho{ background-image: url("assets/images/carru_met/radical.jpeg"); }
 
 /* Sombra/overlay para legibilidad sobre la foto */
 .flip-card__shade{
