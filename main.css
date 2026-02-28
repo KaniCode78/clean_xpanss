@@ -21,6 +21,7 @@
 
   --radius: 18px;
   --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+  --header-h: 64px;
 }
 
 * {
@@ -73,11 +74,21 @@ a:hover {
 .site-header {
   position: sticky;
   top: 0;
+  min-height: var(--header-h);
+  border-radius: 0;
+  border: none;
+  width: 100%;
   z-index: 50;
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 10px 4%;
+  padding: 0 4%;
+  /* Glass nav background to match hero */
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid rgba(255,255,255,.45);
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
 }
 
 .brand {
@@ -87,9 +98,9 @@ a:hover {
   font-weight: 700;
 }
 
-.brand__logo {
-  width: 34px;
-  height: auto
+.brand__logo{
+  height: 28px;
+  width: auto;
 }
 
 .brand--footer .brand__logo {
@@ -179,9 +190,16 @@ a:hover {
 
 .mobile-drawer {
   position: fixed;
-  inset: 64px 0 auto 0;
-  background: rgba(255, 255, 255, .96);
-  border-top: 1px solid #E7EEF1;
+  inset: var(--header-h) 0 auto 0;
+
+  /* Fondo glass (igual que header/hero) */
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+  border-top: 1px solid rgba(255,255,255,.45);
+  box-shadow: 0 18px 55px rgba(0,0,0,.18);
+
   transform: translateY(-120%);
   transition: transform .25s ease;
   will-change: transform;
@@ -199,16 +217,43 @@ a:hover {
   gap: 12px
 }
 
-.mobile-drawer a {
+
+
+/* Links normales del menú móvil (glass) */
+.mobile-drawer a:not(.btn){
   padding: .9rem 1rem;
   border-radius: 12px;
-  background: #F4F7F8;
+
+  /* Más translúcido para que se vea la foto detrás */
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.45);
+
   display: block;
-  font-weight: 700
+  font-weight: 800;
+  color: var(--blue);
+  text-decoration: none;
 }
 
+/* CTA dentro del menú móvil: mantiene estilo botón */
+.mobile-drawer a.btn{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: .9rem 1rem;
+  border-radius: 14px;
 
+  background: linear-gradient(180deg, var(--blue), #003AA1);
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
 
+  box-shadow: 0 10px 26px rgba(0,0,0,.14);
+}
+
+.mobile-drawer a.btn:hover{ opacity: .96; }
 
 
 /* Sections */
@@ -381,7 +426,7 @@ a:hover {
 
 .cta__copy h2{
   margin: 0 0 10px;
-  font-family: "League Spartan", Inter, system-ui, sans-serif;
+font-family: "Manrope", system-ui, sans-serif;
   font-size: clamp(28px, 3.2vw, 44px);
   line-height: 1.05;
 }
@@ -545,19 +590,33 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 14px;
+  padding: 12px 16px;
   border-radius: 999px;
-  background: rgba(255,255,255,.92);
+
+  /* Glass style igual que header/hero */
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+
   color: #0B1F27;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.45);
   box-shadow: 0 16px 40px rgba(0,0,0,.18);
+
   transition: transform .18s ease, box-shadow .18s ease;
+  animation: waPulse 2.6s ease-in-out infinite;
 }
 
 .wa-fab:hover{
   transform: translateY(-2px);
   box-shadow: 0 22px 55px rgba(0,0,0,.20);
+  animation-play-state: paused; /* detiene el latido al interactuar */
+}
+
+@keyframes waPulse{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
 }
 
 .wa-fab span[aria-hidden="true"]{
@@ -709,6 +768,8 @@ a:hover {
   .footer__grid {
     grid-template-columns: 1fr 1fr
   }
+
+  .site-header{ padding: 0 14px; }
 }
 
 @media (max-width: 560px) {
@@ -748,7 +809,8 @@ a:hover {
   width: 100%;
   display: grid;
   align-items: center;
-  padding: 96px 0 48px;              /* espacio para header sticky */
+  margin-top: calc(-1 * var(--header-h));
+  padding: calc(40px + var(--header-h)) 0 48px; /* ajustado para centrar mejor el mensaje verticalmente */
   background: url("assets/images/hero_img.jpeg") center/cover no-repeat;
 }
 
@@ -836,12 +898,12 @@ a:hover {
 
 
 .hero__copy h1 {
-  font-family: "League Spartan", Inter, system-ui, sans-serif;
-  /*font-size: clamp(34px, 4.5vw, 54px);*/
+font-family: "Manrope", system-ui, sans-serif;  /*font-size: clamp(34px, 4.5vw, 54px);*/
   line-height: 1.05;
   letter-spacing: -.02em;
   margin: 0 0 10px;
   font-weight: lighter;
+   font-weight: 400;
 }
 
 .accent {
@@ -862,7 +924,7 @@ a:hover {
   display: grid;
   place-items: center;
   text-align: center;
-  min-height: calc(100vh - 80px); /* compensa header */
+  min-height: calc(100vh - var(--header-h)); /* compensa header real */
 }
 
  .hero__copy{
@@ -871,23 +933,20 @@ a:hover {
  }
 
  /* Banner glass para el texto del hero (como el ejemplo) */
- .hero--fullscreen .hero__layout--center .hero__copy{
-   display: inline-block;
-   padding: 18px 22px;
-   border-radius: 18px;
+.hero--fullscreen .hero__layout--center .hero__copy{
+  display: inline-block;
+  padding: 24px 36px;
+  border-radius: 24px;
 
-   /* gris translúcido */
-   background: rgba(210, 218, 224, .55);
-   border: 1px solid rgba(255,255,255,.28);
+  /* Glass limpio como el ejemplo */
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(255,255,255,.45);
 
-   /* blur real */
-   backdrop-filter: blur(14px) saturate(120%);
-   -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
 
-   /* sombra suave */
-   box-shadow: 0 14px 40px rgba(0,0,0,.18);
- }
-
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+}
  /* Ajuste de color del texto dentro del banner */
  .hero--fullscreen .hero__layout--center .hero__copy h1{
    color: rgba(11,31,39,.92);
@@ -1035,7 +1094,7 @@ a:hover {
 
 .bio__title{
   margin: 0 0 6px;
-  font-family: "League Spartan", Inter, system-ui, sans-serif;
+font-family: "Manrope", system-ui, sans-serif;
   font-size: clamp(28px, 2.8vw, 40px);
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -1349,7 +1408,7 @@ text-overflow: ellipsis;
 
 .quote-card__title{
   margin: 0;
-  font-family: "League Spartan", Inter, system-ui, sans-serif;
+font-family: "Manrope", system-ui, sans-serif;
   font-size: 1.6rem;
   line-height: 1.05;
   color: #0E2833;
