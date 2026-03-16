@@ -10,6 +10,7 @@
   --blue: #0051CF;
   --teal: #00A9CE;
 
+
   --ink: #0E2833;
   --muted: #6F8790;
   --surface: #F5F8F9;
@@ -85,8 +86,8 @@ a:hover {
   gap: 20px;
   padding: 0 4%;
   /* Glass nav background to match hero */
-  background: background: rgba(70,80,90,.55);
-  backdrop-filter: blur(1px) saturate(140%);
+  /* background: background: rgba(70,80,90,.55); */
+  /* backdrop-filter: blur(1px) saturate(140%); */
   -webkit-backdrop-filter: blur(1px) saturate(140%);
   border-bottom: 1px solid rgba(255,255,255,.45);
   box-shadow: 0 8px 30px rgba(0,0,0,.12);
@@ -1264,19 +1265,19 @@ font-family: "Manrope", system-ui, sans-serif;
 }
 
 /* Cambia estas rutas por tus imágenes */
-.method-bg--ai{ background-image: url("assets/images/carru_met/appreciative.jpeg"); }
-.method-bg--dt{ background-image: url("assets/images/carru_met/Desgin\ thinking.jpeg"); }
-.method-bg--ce{ background-image: url("assets/images/carru_met/team\ coaching.jpeg"); }
-.method-bg--rc{ background-image: url("assets/images/carru_met/radical.jpeg"); }
-.method-bg--ho{ background-image: url("assets/images/carru_met/happiness.jpeg"); }
+.method-bg--rc{ background-image: url("assets/images/fotos_card/01RADICALCOLLABORATION.jpg"); }
+.method-bg--dt{ background-image: url("assets/images/fotos_card/02DESIGNTHINKING.jpg"); }
+.method-bg--ai{ background-image: url("assets/images/fotos_card/03APPRECIATIVEINQUIRY.jpg"); }
+.method-bg--ce{ background-image: url("assets/images/fotos_card/04TEAMCOACHING.jpg"); }
+.method-bg--ho{ background-image: url("assets/images/fotos_card/05HAPPINESS.jpg"); }
 
 /* Sombra/overlay para legibilidad sobre la foto */
 .flip-card__shade{
   position: absolute;
   inset: 0;
-   background:
+   /* background:
   linear-gradient(180deg, rgba(6,22,27,0) 0%, rgba(6,22,27,.78) 86%),
-  radial-gradient(120% 120% at 0% 0%, rgba(0,169,206,.10) 0%, transparent 60%);
+  radial-gradient(120% 120% at 0% 0%, rgba(0,169,206,.10) 0%, transparent 60%); */
   pointer-events: none;
 }
 
@@ -1324,8 +1325,14 @@ text-overflow: ellipsis;
   margin-top: auto; /* 👈 ESTA es la clave: baja H3 y empuja P junto */
   padding-bottom: 0;
   font-size: 1.18rem;
-  color: #ffffff;
-  font-weight: 950;
+  color: var(--blue);
+  text-align: center;
+  font-weight: lighter;
+  background-color: var(--surface);
+  border-radius: 12px;
+
+
+  
 }
 .flip-card__front p{
   margin: 0;
