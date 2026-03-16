@@ -18,6 +18,7 @@
   --glass-bg: rgba(255, 255, 255, .65);
   --glass-brd: rgba(255, 255, 255, .35);
   --glass-shadow: 0 10px 40px rgba(0, 40, 60, .15);
+  --glass-ui: rgba(70,80,90,.55);
 
   --radius: 18px;
   --shadow: 0 10px 30px rgba(0, 0, 0, .12);
@@ -84,9 +85,9 @@ a:hover {
   gap: 20px;
   padding: 0 4%;
   /* Glass nav background to match hero */
-  background: rgba(255,255,255,.55);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  background: background: rgba(70,80,90,.55);
+  backdrop-filter: blur(1px) saturate(140%);
+  -webkit-backdrop-filter: blur(1px) saturate(140%);
   border-bottom: 1px solid rgba(255,255,255,.45);
   box-shadow: 0 8px 30px rgba(0,0,0,.12);
 }
@@ -594,13 +595,14 @@ font-family: "Manrope", system-ui, sans-serif;
   border-radius: 999px;
 
   /* Glass style igual que header/hero */
-  background: rgba(255,255,255,.55);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  background:  rgba(70,80,90,.55);
+  backdrop-filter: blur(0px) saturate(140%);
+  -webkit-backdrop-filter: blur(0px) saturate(140%);
 
   color: #0B1F27;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,.45);
+  /* border: 1px solid rgba(255,255,255,.45); */
+border: none;
   box-shadow: 0 16px 40px rgba(0,0,0,.18);
 
   transition: transform .18s ease, box-shadow .18s ease;
@@ -939,21 +941,21 @@ font-family: "Manrope", system-ui, sans-serif;  /*font-size: clamp(34px, 4.5vw, 
   border-radius: 24px;
 
   /* Glass limpio como el ejemplo */
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(70,80,90,.55);
+  border: none;
 
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(0px) saturate(150%);
+  -webkit-backdrop-filter: blur(0px) saturate(150%);
 
   box-shadow: 0 20px 60px rgba(0,0,0,.18);
 }
  /* Ajuste de color del texto dentro del banner */
  .hero--fullscreen .hero__layout--center .hero__copy h1{
-   color: rgba(11,31,39,.92);
+     color: #ffffff;
  }
 
  .hero--fullscreen .hero__layout--center .hero__copy p{
-   color: rgba(11,31,39,.78);
+color: rgba(255,255,255,.85);
  }
 
  /* Fallback si backdrop-filter no está soportado */
