@@ -947,7 +947,9 @@ a:hover {
 .accent {
   background: linear-gradient(90deg, var(--teal), var(--blue) 70%, var(--red));
   -webkit-background-clip: text;
-  color: transparent
+  color: transparent;
+  font-weight: bold;
+
 }
 
 .hero__copy p {
@@ -1695,7 +1697,7 @@ a:hover {
 .featured-card2 {
   padding: 20px;
   border-radius: 18px;
-  background: #FEE3A2;
+  background: #f89a04;
   border: 1px solid rgba(255, 255, 255, .35);
 
 }
