@@ -1532,8 +1532,11 @@ a:hover {
 .quote-card__text {
   margin: 0;
   color: rgba(11, 31, 39, .82);
-  font-weight: 560;
-  max-width: 44ch;
+  font-weight: bold;
+  max-width:54ch;
+  font-size: 1.5em;
+
+  align-content: center;
 }
 
 .quote-card__bar {
