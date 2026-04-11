@@ -934,8 +934,17 @@ a:hover {
 }
 
 
+
+.texto-calibri-bold {
+  
+}
+
+
+
 .hero__copy h1 {
-  font-family: "Manrope", system-ui, sans-serif;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: bold;
+  /* font-family: "Manrope", system-ui, sans-serif; */
   /*font-size: clamp(34px, 4.5vw, 54px);*/
   line-height: 1.05;
   letter-spacing: -.02em;
@@ -1689,34 +1698,29 @@ a:hover {
   text-align: center;
 }
 
-.featured-card {
-  padding: 20px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, .35);
-  background-color: #87C159;
 
-}
-
-.featured-card2 {
-  padding: 20px;
-  border-radius: 18px;
-  background: #f89a04;
-  border: 1px solid rgba(255, 255, 255, .35);
-
-}
-
+.featured-card,
+.featured-card2,
 .featured-card3 {
   padding: 20px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, .35);
-  background-color: #F3C301;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 270px;
 }
+.featured-card { background-color: #87C159; }
+.featured-card2 { background: #f89a04; }
+.featured-card3 { background-color: #F3C301; }
 
 .featured-card__top {
-  display: grid;
-  gap: 8px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 72px;
+  margin-bottom: 14px;
+  text-align: center;
 }
 
 .featured-card__pill {
@@ -1731,17 +1735,23 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, .22);
 }
 
-.featured-card h3 {
+.featured-card h3,
+.featured-card2 h3,
+.featured-card3 h3 {
   margin: 0;
   font-size: 1.12rem;
   font-weight: 950;
   color: #0E2833;
+  line-height: 1.25;
 }
 
-.featured-card p {
+.featured-card p,
+.featured-card2 p,
+.featured-card3 p {
   margin: 0;
   color: rgba(11, 31, 39, .78);
   font-weight: 560;
+  text-align: center;
 }
 
 /* Responsive */
