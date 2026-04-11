@@ -1632,7 +1632,7 @@ text-align: center;
 
 .services__panel {
   display: none;
-  padding: 22px;
+  padding: 32px 40px 28px;
 }
 
 .services__panel.is-active {
@@ -1641,23 +1641,30 @@ text-align: center;
 
 .services__panelHead {
   display: grid;
-  gap: 6px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin: 0 auto 28px;
+  max-width: 760px;
+  text-align: center;
+  justify-items: center;
 }
 
 .services__panelHead h3 {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
   font-weight: 950;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #0E2833;
 }
 
 .services__panelHead p {
   margin: 0;
-  color: rgba(11, 31, 39, .78);
-  font-weight: 560;
-  max-width: 80ch;
-  text-align: justify;
+  color: rgba(11, 31, 39, .72);
+  font-weight: 520;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  max-width: 680px;
+  text-align: center;
 }
 
 .services__grid {
@@ -1793,6 +1800,22 @@ text-align: center;
 
   .featured__grid {
     grid-template-columns: 1fr;
+  }
+
+  .services__panel {
+    padding: 24px 20px;
+  }
+
+  .services__panelHead {
+    margin: 0 auto 22px;
+    max-width: 100%;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .services__panelHead p {
+    max-width: 100%;
+    font-size: 1rem;
   }
 }
 
