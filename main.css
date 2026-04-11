@@ -250,8 +250,8 @@ a:hover {
   padding: .9rem 1rem;
   border-radius: 14px;
 
-  background: linear-gradient(180deg, var(--blue), #003AA1);
-  border: 1px solid transparent;
+  background: linear-gradient(180deg, var(--red), var(--red));
+  border: 1px solid var(--red);
   color: #fff;
   font-weight: 800;
   text-decoration: none;
@@ -1233,14 +1233,22 @@ a:hover {
     height: 290px;
   }
 
-  .bio__cta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+
 }
 
 
+@media (max-width: 560px) {
+  .bio__cta {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
 
+  .bio__cta .btn,
+  .bio__cta .bio__link {
+    white-space: nowrap;
+  }
+}
 
 /* ===== Metodologías ===== */
 .methods {
