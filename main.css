@@ -41,7 +41,7 @@ body {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: var(--tipo-letra)
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;fo
   /* background: radial-gradient(60% 60% at 100% 0%, rgba(0, 169, 206, .08), transparent 60%), #fff; */
   line-height: 1.55;
 }
@@ -1551,7 +1551,7 @@ a:hover {
   font-weight: bold;
   max-width: 54ch;
   font-size: 1.5em;
-
+text-align: center;
   align-content: center;
 }
 
@@ -1657,6 +1657,7 @@ a:hover {
   color: rgba(11, 31, 39, .78);
   font-weight: 560;
   max-width: 80ch;
+  text-align: justify;
 }
 
 .services__grid {
@@ -1723,7 +1724,7 @@ a:hover {
 }
 
 .featured-card2 {
-  background: #f89a04;
+  background: #FF4F45;
 }
 
 .featured-card3 {
