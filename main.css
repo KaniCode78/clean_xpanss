@@ -24,6 +24,9 @@
   --radius: 18px;
   --shadow: 0 10px 30px rgba(0, 0, 0, .12);
   --header-h: 64px;
+
+  --tipo-letra: font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: bold;
 }
 
 * {
@@ -38,7 +41,7 @@ body {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+  font-family: var(--tipo-letra)
   /* background: radial-gradient(60% 60% at 100% 0%, rgba(0, 169, 206, .08), transparent 60%), #fff; */
   line-height: 1.55;
 }
@@ -935,15 +938,13 @@ a:hover {
 
 
 
-.texto-calibri-bold {
-  
-}
+.texto-calibri-bold {}
 
 
 
 .hero__copy h1 {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-weight: bold;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight: bold;
   /* font-family: "Manrope", system-ui, sans-serif; */
   /*font-size: clamp(34px, 4.5vw, 54px);*/
   line-height: 1.05;
@@ -1151,6 +1152,7 @@ a:hover {
 }
 
 .bio__subtitle {
+  
   margin: 0 0 14px;
   font-weight: 750;
   color: rgba(11, 31, 39, .72);
@@ -1161,12 +1163,16 @@ a:hover {
   color: rgba(11, 31, 39, .86);
   font-size: 1.05rem;
   font-weight: 560;
+    text-align: justify;
+
 }
 
 .bio__text {
   margin: 0 0 12px;
   color: rgba(11, 31, 39, .82);
-  font-weight: 520;
+    font-weight: 520;
+      text-align: justify;
+
 }
 
 /* Quote */
@@ -1177,6 +1183,7 @@ a:hover {
   color: #0B1F27;
   font-weight: 700;
   line-height: 1.45;
+  text-align: center;
 }
 
 /* CTA */
@@ -1542,7 +1549,7 @@ a:hover {
   margin: 0;
   color: rgba(11, 31, 39, .82);
   font-weight: bold;
-  max-width:54ch;
+  max-width: 54ch;
   font-size: 1.5em;
 
   align-content: center;
@@ -1710,9 +1717,18 @@ a:hover {
   justify-content: flex-start;
   min-height: 270px;
 }
-.featured-card { background-color: #87C159; }
-.featured-card2 { background: #f89a04; }
-.featured-card3 { background-color: #F3C301; }
+
+.featured-card {
+  background-color: #87C159;
+}
+
+.featured-card2 {
+  background: #f89a04;
+}
+
+.featured-card3 {
+  background-color: #F3C301;
+}
 
 .featured-card__top {
   display: flex;
