@@ -136,8 +136,8 @@ a:hover {
   justify-content: center;
   padding: .9rem 1.1rem;
   border-radius: 14px;
-  border: 1px solid var(--blue);
-  background: linear-gradient(180deg, var(--blue), #003AA1);
+  border: 1px solid var(--red);
+  background: linear-gradient(180deg, var(--red), var(--red));
   color: #fff;
   font-weight: 700;
   box-shadow: var(--shadow);
@@ -1412,6 +1412,7 @@ a:hover {
 
 .flip-card__frontContent h3 {
   margin-top: auto;
+  color: black;
 }
 
 /* Tag pill */
@@ -1442,9 +1443,9 @@ a:hover {
   /* 👈 ESTA es la clave: baja H3 y empuja P junto */
   padding-bottom: 0;
   font-size: 1.18rem;
-  color: var(--blue);
+  color: black;
+  font-weight: 900;
   text-align: center;
-  font-weight: lighter;
   background-color: var(--surface);
   border-radius: 12px;
 
@@ -1609,16 +1610,26 @@ text-align: center;
   border: 1px solid rgba(255, 255, 255, .35);
   background: rgba(255, 255, 255, .55);
   color: rgba(11, 31, 39, .86);
-  border-radius: 14px;
-  padding: 12px 14px;
-  font-weight: 900;
+  border-radius: 16px;
+  padding: 16px 18px;
+
+  font-size: 1.15rem; /* 🔥 AQUÍ SUBES EL TAMAÑO */
+  font-weight: 950;
+  letter-spacing: .03em;
+
   cursor: pointer;
   transition: transform .2s ease, background .2s ease, border-color .2s ease;
 }
-
 .services__tab:hover {
   transform: translateY(-1px);
 }
+
+@media (min-width: 1024px) {
+  .services__tab {
+    font-size: 1.25rem;
+  }
+}
+
 
 .services__tab.is-active {
   color: #fff;
