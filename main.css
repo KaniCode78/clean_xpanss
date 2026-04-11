@@ -25,7 +25,7 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, .12);
   --header-h: 64px;
 
-  --tipo-letra: font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  --tipo-letra: font-family: Calibri, Arial, sans-serif;
     font-weight: bold;
 }
 
