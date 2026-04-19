@@ -849,7 +849,7 @@ a:hover {
   margin-top: calc(-1 * var(--header-h));
   padding: calc(40px + var(--header-h)) 0 48px;
   /* ajustado para centrar mejor el mensaje verticalmente */
-  background: url("assets/images/hero_img.jpeg") center/cover no-repeat;
+  background: url("/assets/images/hero_img.jpeg") center/cover no-repeat;
 }
 
 /* Overlay para legibilidad del texto */
@@ -1340,7 +1340,7 @@ a:hover {
 
 /* Cambia estas rutas por tus imágenes */
 .method-bg--rc {
-  background-image: url("assets/images/fotos_card/01RADICALCOLLABORATION.jpg");
+  background-image: url("../images/fotos_card/01RADICALCOLLABORATION.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1350,18 +1350,17 @@ a:hover {
 }
 
 .method-bg--dt {
-  background-image: url("assets/images/fotos_card/02DESIGNTHINKING.jpg");
+  background-image: url("../images/fotos_card/02DESIGNTHINKING.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   border-radius: 12px;
-
 }
 
 .method-bg--ai {
-  background-image: url("assets/images/fotos_card/03APPRECIATIVEINQUIRY.jpg");
+  background-image: url("../images/fotos_card/03APPRECIATIVEINQUIRY.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1371,7 +1370,7 @@ a:hover {
 }
 
 .method-bg--ce {
-  background-image: url("assets/images/fotos_card/04TEAMCOACHING.jpg");
+  background-image: url("../images/fotos_card/04TEAMCOACHING.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1381,7 +1380,7 @@ a:hover {
 }
 
 .method-bg--ho {
-  background-image: url("assets/images/fotos_card/05HAPPINESS.jpg");
+  background-image: url("../images/fotos_card/05HAPPINESS.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
